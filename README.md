@@ -23,7 +23,7 @@ _In this project, I make a site for where a user inputs a number of their choice
 * _Open code-review-3/index.html_
 
 ## Tests
-Describe: rodgers()
+Describe: robogers()
 
 _Test 1: "It should return an array between 0 and the user input" 
 Code: robogers(10); 
