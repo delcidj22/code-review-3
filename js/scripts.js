@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  $("userInput").submit(function(event){
+    event.preventDefault();
+    const number = $(".userNumber").val();
+    $("#results").html(userInput(number));
+});
+});
 
 // Utility Logic
 function inArray(number){
@@ -9,32 +16,24 @@ function inArray(number){
   }
 
 // business logic
-function userInput(number){
-  lastArray = [];
-  inputArray = inArray(number)
-  inputArray.forEach(function(user){
-    if (user.includes("3")){
-      lastArray.push(user + "Won't you be my neighbor?")
-    }
-    else (user.includes("2")){
-      lastArray.push(user + "Boop!");
-    }
-    else if (user.includes("1")) {
-      lastArray.push(user, + "Beep!");
-    }
-    else if {
-      lastArray.push(user ++);
-    }
-  });
-  return lastArray;
-}
 
-});
+  function userInput(number){
+    lastArray = [];
+    inputArray = inArray(number)
+    inputArray.forEach(function(num){
+      if (num.includes("3")){
+          lastArray.push(num + "Won't you be my neighbor?");
+        }
+      else if (num.includes("2")){
+          lastArray.push(num + "Boop!");
+        }
+      else if (num.includes("1")){
+        lastArray.push(num + "Beep!");
+      } else {
+        lastArray.push(num + num);
+      }
+      
+    });
+    return lastArray;
+  }
 
-$(document).ready(function(){
-  $("form.userInput").submit(function(event){
-    event.preventDefault();
-    const number = $(".userNumber").val();
-    $("#results").html(userInput(number));
-  });
-});
