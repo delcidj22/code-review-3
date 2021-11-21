@@ -12,19 +12,21 @@
 <body>
   <div class="container">
     <h1>Mr. Roboger's Neighborhood</h1>
-    <h2>Please submit a number of your choice and wait to see what it returns!</h2>
+    <hr>
+    <p>Please submit a number of your choice and wait to see what it returns!</p>
 
-    <div class="number">
+    <form id="userInput">
       <label>
         <p>Submit a Number Here:</p>
-        <input type="text" class="input">
+        <input type="text" class="input" name="userNumber">
         <button type="lg-btn">Submit</button>
       </label>
+    </form>
 
+    <div id="results">
+      <p>Here are the results:</p>
     </div>
-
-
-
+  
 
   </div>
 </body>
