@@ -20,7 +20,7 @@ _In this project, I make a site for where a user inputs a number of their choice
 
 * _Clone this repository to your desktop_
 * _Navigate to top of directory_
-* _Open code-review-2/index.html_
+* _Open code-review-3/index.html_
 
 ## Tests
 Describe: rodgers()
