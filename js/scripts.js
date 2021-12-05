@@ -1,12 +1,11 @@
 $(document).ready(function(){
-  $("#userInput").submit(function(event){
-    event.preventDefault();
-    const number = $(".userInput").val();
-    $("#results").html(userInput(number));
-});
+    $("#userInput").submit(function(event){
+      event.preventDefault();
+      const number = $(".input").val();
+      $("#results").html(userInput(number));
+  });
 });
 
-// Utility Logic
 function inArray(number){
   inputArray = [];
   for (i = 0; i <= number; i++){
@@ -22,16 +21,17 @@ function inArray(number){
     inputArray = inArray(number)
     inputArray.forEach(function(num){
       if (num.includes("3")){
-          lastArray.push(num + "Won't you be my neighbor?");
+          lastArray.push("<li>" + "Won't you be my neighbor?");
         }
       else if (num.includes("2")){
-          lastArray.push(num + "Boop!");
+          lastArray.push("<li>" + "Boop!");
         }
       else if (num.includes("1")){
-        lastArray.push(num + "Beep!");
-      } else {
-        lastArray.push(num + num);
-      }
+        lastArray.push("<li>" + "Beep!");
+        } 
+      else {
+        lastArray.push("<li>" + num);
+        }
       
     });
     return lastArray;
