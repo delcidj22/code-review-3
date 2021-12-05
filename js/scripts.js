@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  $("userInput").submit(function(event){
+  $("#userInput").submit(function(event){
     event.preventDefault();
-    const number = $(".userNumber").val();
+    const number = $(".userInput").val();
     $("#results").html(userInput(number));
 });
 });
